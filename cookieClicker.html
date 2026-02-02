@@ -68,7 +68,10 @@
           badgeEl.textContent = "Status: Champion";
           setBackground("#e6ffe9");
           cookieBtn.textContent = "🏆Victory Cookie";
-        } 
+        } else if (clicks > 100 && clicks % 25 === 0) {
+          messageEl.textContent = `Still going?! ${clicks} clicks is wild.`;
+          badgeEl.textContent = "Status: Beyond the assignment";
+      }
      });
     </script>
   </body>
