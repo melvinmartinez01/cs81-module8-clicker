@@ -36,4 +36,40 @@
       function setBackground(color) {
         document.body.style.background = color;
       }
+
+      //Step 3: Event listener for clicks
+      cookieBtn.addEventListener("click",function() {
+        clicks++;
+
+        //Updating the counter display
+        countEl.textContent = clicks;
+
+        if (clicks === 1) {
+          messageEl.textContent = "First click... alright, we're live 🎥";
+          badgeEl.textContent = "Status: warming up";
+        } else if (clicks === 10) {
+          messageEl.textContent = "Just getting started.";
+          badgeEl.textContent = "Status: consistent";
+          setBackground("#e8fff1");
+        } else if (clicks === 25) {
+          messageEl.textContent = "Wow, that's a lot of cookies.";
+          badgeEl.textContent = "Status: Locked In";
+          setBackground("#fff7e6");
+        } else if (clicks === 50) {
+          messageEl.textContent = "You still clicking?? Okay, respect 👌";
+          badgeEl.textContent = "Status: Unstoppable";
+          setBackground("#eaf2ff");
+        } else if (clicks === 75) {
+          messageEl.textContent = "Bubba certified. Keep it going🔥";
+          badgeEl.textContent = "Status: Elite grinder";
+          setBackground("#f5e9ff");
+        } else if (clicks === 100) {
+          messageEl.textContent = "You win! Take a break champ, you earned it🏅";
+          badgeEl.textContent = "Status: Champion";
+          setBackground("#e6ffe9");
+          cookieBtn.textContent = "🏆Victory Cookie";
+        } 
+     });
     </script>
+  </body>
+</html>
